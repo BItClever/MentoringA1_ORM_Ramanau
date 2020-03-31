@@ -2,9 +2,9 @@ namespace MentoringA1_EF_CodeFirst_GenerateModel_Ramanau
 {
     using System.Data.Entity;
 
-    public partial class NorthWindModel : DbContext
+    public partial class NorthwindContext : DbContext
     {
-        public NorthWindModel()
+        public NorthwindContext()
             : base("name=Model1")
         {
         }

@@ -1,13 +1,10 @@
 namespace MentoringA1_EF_Migrations_Ramanau
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
-    public partial class Model1 : DbContext
+    public partial class NorthwindContext : DbContext
     {
-        public Model1()
+        public NorthwindContext()
             : base("name=Model1")
         {
         }

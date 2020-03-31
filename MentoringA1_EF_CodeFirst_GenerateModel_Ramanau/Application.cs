@@ -8,7 +8,7 @@ namespace MentoringA1_EF_CodeFirst_Ramanau
     {
         public void Start()
         {
-            using (var context = new NorthWindModel())
+            using (var context = new NorthwindContext())
             {
                 var BeveragesOrders = (from order in context.Orders
                                        join customer in context.Customers on order.CustomerID equals customer.CustomerID

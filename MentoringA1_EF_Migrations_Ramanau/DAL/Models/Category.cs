@@ -1,29 +1,30 @@
 namespace MentoringA1_EF_Migrations_Ramanau
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class Shipper
+    public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Shipper()
+        public Category()
         {
-            Orders = new HashSet<Order>();
+            Products = new HashSet<Product>();
         }
 
-        public int ShipperID { get; set; }
+        public int CategoryID { get; set; }
 
         [Required]
-        [StringLength(40)]
-        public string CompanyName { get; set; }
+        [StringLength(15)]
+        public string CategoryName { get; set; }
 
-        [StringLength(24)]
-        public string Phone { get; set; }
+        [Column(TypeName = "ntext")]
+        public string Description { get; set; }
+
+        [Column(TypeName = "image")]
+        public byte[] Picture { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

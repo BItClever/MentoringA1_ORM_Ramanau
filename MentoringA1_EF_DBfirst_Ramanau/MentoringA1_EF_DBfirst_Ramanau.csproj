@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
-    <Compile Include="ConnectionContext.cs" />
     <Compile Include="Interfaces\IOrderRepository.cs" />
     <Compile Include="Models\Order.Context.cs">
       <AutoGen>True</AutoGen>

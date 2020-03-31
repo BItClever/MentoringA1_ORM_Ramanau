@@ -1,10 +1,7 @@
-namespace MentoringA1_EF_Migrations_Ramanau
+namespace MentoringA1_EF_CodeFirst_GenerateModel_Ramanau
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class Customer
     {
@@ -48,7 +45,6 @@ namespace MentoringA1_EF_Migrations_Ramanau
 
         [StringLength(24)]
         public string Fax { get; set; }
-        public DateTime? Foundation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

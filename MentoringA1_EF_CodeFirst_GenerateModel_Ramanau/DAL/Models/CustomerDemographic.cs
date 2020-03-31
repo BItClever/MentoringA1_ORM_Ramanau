@@ -1,32 +1,25 @@
 namespace MentoringA1_EF_CodeFirst_GenerateModel_Ramanau
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class Category
+    public partial class CustomerDemographic
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public CustomerDemographic()
         {
-            Products = new HashSet<Product>();
+            Customers = new HashSet<Customer>();
         }
 
-        public int CategoryID { get; set; }
-
-        [Required]
-        [StringLength(15)]
-        public string CategoryName { get; set; }
+        [Key]
+        [StringLength(10)]
+        public string CustomerTypeID { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string Description { get; set; }
-
-        [Column(TypeName = "image")]
-        public byte[] Picture { get; set; }
+        public string CustomerDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
     }
 }

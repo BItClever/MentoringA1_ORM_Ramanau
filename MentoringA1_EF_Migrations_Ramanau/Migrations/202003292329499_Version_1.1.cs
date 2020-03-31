@@ -1,8 +1,7 @@
 namespace MentoringA1_EF_Migrations_Ramanau.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class Version_11 : DbMigration
     {
         public override void Up()
